@@ -33,6 +33,21 @@ echo "$nsdomain" > /etc/xray/dns
 echo "$nsdomain" > /etc/xray/nsdomain
 echo "$nsdomain" > /etc/v2ray/dns
 
+clear
+
+echo -e "kontol"
+
+# Memeriksa apakah IP VPS saat ini cocok dengan IP VPS yang ada di izin.txt
+
+      if [[ "$ipvps" == "$ip_vps" ]]; then
+        echo "Nama VPS: $nama"
+        echo "IP VPS: $ipvps"
+        echo "Tanggal Kadaluwarsa: $tanggal"
+
+        break
+      fi
+    done <<< "$izin"
+
  # Link izin IP VPS
   url_izin='https://raw.githubusercontent.com/R2GANTENG/Bijivps/main/izin.txt'
 
@@ -49,15 +64,6 @@ echo "$nsdomain" > /etc/v2ray/dns
       nama=$(echo "$line" | awk '{print $1}')
       ipvps=$(echo "$line" | awk '{print $2}')
       tanggal=$(echo "$line" | awk '{print $3}')
-
-      # Memeriksa apakah IP VPS saat ini cocok dengan IP VPS yang ada di izin.txt
-      if [[ "$ipvps" == "$ip_vps" ]]; then
-        echo "Nama VPS: $nama"
-        echo "IP VPS: $ipvps"
-        echo "Tanggal Kadaluwarsa: $tanggal"
-        break
-      fi
-    done <<< "$izin"
 
     # Memeriksa apakah IP VPS ditemukan dalam izin.txt
     if [[ "$ipvps" != "$ip_vps" ]]; then
