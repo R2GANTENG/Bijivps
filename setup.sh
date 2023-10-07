@@ -39,13 +39,16 @@ echo -e "kontol"
 
 # Memeriksa apakah IP VPS saat ini cocok dengan IP VPS yang ada di izin.txt
 
-      if [[ "$ipvps" == "$ip_vps" ]]; then
+      
         echo "Nama VPS: $nama"
         echo "IP VPS: $ipvps"
         echo "Tanggal Kadaluwarsa: $tanggal"
+        if [[ "$ipvps" == "$ip_vps" ]]; then
 
         break
+
       fi
+
     done <<< "$izin"
 
  # Link izin IP VPS
