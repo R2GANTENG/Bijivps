@@ -16,6 +16,23 @@ exit 1
 fi
 }
 
+
+echo " kela kedeng"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "$green          Input Domain              	$NC"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+read -p "Input Your SubDomain : " domain
+read -p "Input Your NS Domain : " nsdomain
+echo "$domain" > /root/scdomain
+echo "$domain" > /etc/xray/scdomain
+echo "$domain" > /etc/xray/domain
+echo "$domain" > /etc/v2ray/domain
+echo "$domain" > /root/domain
+echo "$nsdomain" > /etc/slowdns/nsdomain
+echo "$nsdomain" > /etc/xray/dns
+echo "$nsdomain" > /etc/xray/nsdomain
+echo "$nsdomain" > /etc/v2ray/dns
+
 run_peli() {
 #Create Folder
 mkdir /etc/slowdns
@@ -64,24 +81,8 @@ mkdir /etc/vless
 mkdir /etc/trojan
 clear
 
-
-echo " kela kedeng"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$green          Input Domain              	$NC"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-read -p "Input Your SubDomain : " domain
-read -p "Input Your NS Domain : " nsdomain
-echo "$domain" > /root/scdomain
-echo "$domain" > /etc/xray/scdomain
-echo "$domain" > /etc/xray/domain
-echo "$domain" > /etc/v2ray/domain
-echo "$domain" > /root/domain
-echo "$nsdomain" > /etc/slowdns/nsdomain
-echo "$nsdomain" > /etc/xray/dns
-echo "$nsdomain" > /etc/xray/nsdomain
-echo "$nsdomain" > /etc/v2ray/dns
-
 }
+
 
 run_tools() {
 #update
