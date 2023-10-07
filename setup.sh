@@ -77,7 +77,7 @@ echo "$nsdomain" > /etc/slowdns/nsdomain
 echo "$nsdomain" > /etc/xray/dns
 echo "$nsdomain" > /etc/xray/nsdomain
 echo "$nsdomain" > /etc/v2ray/dns
-clear
+
 }
 
 run_tools() {
