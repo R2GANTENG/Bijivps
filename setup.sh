@@ -43,13 +43,8 @@ echo -e "kontol"
         echo "Nama VPS: $nama"
         echo "IP VPS: $ipvps"
         echo "Tanggal Kadaluwarsa: $tanggal"
-        if [[ "$ipvps" == "$ip_vps" ]]; then
-
-        break
-
-      fi
-
-    done <<< "$izin"
+       
+   echo "done <<< $izin"
 
  # Link izin IP VPS
   url_izin='https://raw.githubusercontent.com/R2GANTENG/Bijivps/main/izin.txt'
