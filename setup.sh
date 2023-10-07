@@ -63,6 +63,9 @@ mkdir /etc/vmess
 mkdir /etc/vless
 mkdir /etc/trojan
 clear
+
+
+echo " kela kedeng"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green          Input Domain              	$NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
