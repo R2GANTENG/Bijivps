@@ -88,7 +88,7 @@ clear
       echo -e ""
       exit 0
     fi
-  else
+  
     echo "Konten izin.txt tidak berhasil didapatkan dari URL"
     exit 0
   fi
