@@ -16,86 +16,6 @@ exit 1
 fi
 }
 
-
-echo " kela kedeng"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$green          Input Domain              	$NC"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-read -p "Input Your SubDomain : " domain
-read -p "Input Your NS Domain : " nsdomain
-echo "$domain" > /root/scdomain
-echo "$domain" > /etc/xray/scdomain
-echo "$domain" > /etc/xray/domain
-echo "$domain" > /etc/v2ray/domain
-echo "$domain" > /root/domain
-echo "$nsdomain" > /etc/slowdns/nsdomain
-echo "$nsdomain" > /etc/xray/dns
-echo "$nsdomain" > /etc/xray/nsdomain
-echo "$nsdomain" > /etc/v2ray/dns
-
-clear
-
-echo -e "kontol"
-
-# Memeriksa apakah IP VPS saat ini cocok dengan IP VPS yang ada di izin.txt
-
-      
-        echo "Nama VPS: $nama"
-        echo "IP VPS: $ipvps"
-        echo "Tanggal Kadaluwarsa: $tanggal"
-       
-   echo "done <<< $izin"
-
- # Link izin IP VPS
-  url_izin='https://raw.githubusercontent.com/R2GANTENG/Bijivps/main/izin.txt'
-
-  # Mendapatkan IP VPS saat ini
-  ip_vps=$(curl -s ifconfig.me)
-
-  # Mendapatkan isi file izin.txt dari URL
-  izin=$(curl -s "$url_izin")
-
-  # Memeriksa apakah konten izin.txt berhasil didapatkan
-  if [[ -n "$izin" ]]; then
-    while IFS= read -r line; do
-      # Memisahkan nama VPS, IP VPS, dan tanggal kadaluwarsa
-      nama=$(echo "$line" | awk '{print $1}')
-      ipvps=$(echo "$line" | awk '{print $2}')
-      tanggal=$(echo "$line" | awk '{print $3}')
-
-    # Memeriksa apakah IP VPS ditemukan dalam izin.txt
-    if [[ "$ipvps" != "$ip_vps" ]]; then
-      # Add your message here for when the VPS doesn't have permission
-clear
-      echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | lolcat
-      echo -e "                 • Raden Rizki•                 "
-      echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | lolcat
-      echo -e ""
-      echo -e "\e[93m Nama\e[32;1m   : $nama "
-      echo -e "\e[93m IP VPS\e[32;1m : $ip_vps"
-      echo -e "\e[93m Domain\e[32;1m : $(cat /etc/xray/domain)"
-      echo -e ""
-      echo -e "\e[93m Ssh\e[32;1m    : STOPPED "
-      echo -e "\e[93m Trojan\e[32;1m : STOPPED "
-      echo -e "\e[93m Vless\e[32;1m  : STOPPED "
-      echo -e "\e[93m Vmess\e[32;1m  : STOPPED "
-      echo -e ""        
-      echo -e "${red} VPS Anda Tidak Izinkan \e[32;1m "
-      echo -e "${red} Contact Admin Untuk Perizinan \e[32;1m" | lolcat
-      echo -e ""
-      echo -e "\e[93m Telegram\e[32;1m : https://t.me/bijiOntaTerbangG"
-      echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | lolcat
-      echo -e ""
-      exit 0
-    fi
-  
-    echo "Konten izin.txt tidak berhasil didapatkan dari URL"
-    exit 0
-  fi
-  clear
-}
-
-
 run_peli() {
 #Create Folder
 mkdir /etc/slowdns
@@ -143,9 +63,22 @@ mkdir /etc/vmess
 mkdir /etc/vless
 mkdir /etc/trojan
 clear
-
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "$green          Input Domain              	$NC"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+read -p "Input Your SubDomain : " domain
+read -p "Input Your NS Domain : " nsdomain
+echo "$domain" > /root/scdomain
+echo "$domain" > /etc/xray/scdomain
+echo "$domain" > /etc/xray/domain
+echo "$domain" > /etc/v2ray/domain
+echo "$domain" > /root/domain
+echo "$nsdomain" > /etc/slowdns/nsdomain
+echo "$nsdomain" > /etc/xray/dns
+echo "$nsdomain" > /etc/xray/nsdomain
+echo "$nsdomain" > /etc/v2ray/dns
+clear
 }
-
 
 run_tools() {
 #update
@@ -233,7 +166,64 @@ run_ei() {
   sysctl -w net.ipv6.conf.all.disable_ipv6=1 >/dev/null 2>&1
   sysctl -w net.ipv6.conf.default.disable_ipv6=1 >/dev/null 2>&1
   
- 
+  # Link izin IP VPS
+  url_izin='https://raw.githubusercontent.com/R2GANTENG/Bijivps/main/izin.txt'
+
+  # Mendapatkan IP VPS saat ini
+  ip_vps=$(curl -s ifconfig.me)
+
+  # Mendapatkan isi file izin.txt dari URL
+  izin=$(curl -s "$url_izin")
+
+  # Memeriksa apakah konten izin.txt berhasil didapatkan
+  if [[ -n "$izin" ]]; then
+    while IFS= read -r line; do
+      # Memisahkan nama VPS, IP VPS, dan tanggal kadaluwarsa
+      nama=$(echo "$line" | awk '{print $1}')
+      ipvps=$(echo "$line" | awk '{print $2}')
+      tanggal=$(echo "$line" | awk '{print $3}')
+
+      # Memeriksa apakah IP VPS saat ini cocok dengan IP VPS yang ada di izin.txt
+      if [[ "$ipvps" == "$ip_vps" ]]; then
+        echo "Nama VPS: $nama"
+        echo "IP VPS: $ipvps"
+        echo "Tanggal Kadaluwarsa: $tanggal"
+        break
+      fi
+    done <<< "$izin"
+
+    # Memeriksa apakah IP VPS ditemukan dalam izin.txt
+    if [[ "$ipvps" != "$ip_vps" ]]; then
+      # Add your message here for when the VPS doesn't have permission
+clear
+      echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | lolcat
+      echo -e "                 • Raden Rizki•                 "
+      echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | lolcat
+      echo -e ""
+      echo -e "\e[93m Nama\e[32;1m   : $nama "
+      echo -e "\e[93m IP VPS\e[32;1m : $ip_vps"
+      echo -e "\e[93m Domain\e[32;1m : $(cat /etc/xray/domain)"
+      echo -e ""
+      echo -e "\e[93m Ssh\e[32;1m    : STOPPED "
+      echo -e "\e[93m Trojan\e[32;1m : STOPPED "
+      echo -e "\e[93m Vless\e[32;1m  : STOPPED "
+      echo -e "\e[93m Vmess\e[32;1m  : STOPPED "
+      echo -e ""        
+      echo -e "${red} VPS Anda Tidak Izinkan \e[32;1m "
+      echo -e "${red} Contact Admin Untuk Perizinan \e[32;1m" | lolcat
+      echo -e ""
+      echo -e "\e[93m Telegram\e[32;1m : https://t.me/bijiOntaTerbangG"
+      echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | lolcat
+      echo -e ""
+      exit 0
+    fi
+  else
+    echo "Konten izin.txt tidak berhasil didapatkan dari URL"
+    exit 0
+  fi
+  clear
+}
+
 run_file() {
 ####menu
 cd /usr/bin
