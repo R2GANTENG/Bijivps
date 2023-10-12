@@ -1,5 +1,7 @@
 #🇮🇩 AGUS KONTOL🇮🇩
-
+# support debian 10 & 11
+# support ubuntu 20 & 18
+# command install
 #COPAS AJA BAWA INI👇👇👇
 
 langkah awal
