@@ -8,5 +8,6 @@ langkah kedua
 
 #UNTUK PREMISSION (IZIN IP VPS) BISA LANGSUNG CHAT KE NOMER INI 👇👇
 
-#WA: wa.me/6283876103562
-#TELE: t.me/bijiOntaTerbangG
+#WA: https://wa.me/6283876103562
+
+#TELE: https://t.me/bijiOntaTerbangG
