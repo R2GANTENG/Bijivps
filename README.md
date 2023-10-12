@@ -1,5 +1,6 @@
 #🇮🇩 AGUS KONTOL🇮🇩
-COPAS AJA BAWA INI👇👇👇
+
+#COPAS AJA BAWA INI👇👇👇
 
 langkah awal
 <code><pre>apt update && apt upgrade -y</code></pre>
