@@ -16,18 +16,31 @@
 👇👇
 
 🏪HARGA AUTOSCRIPT PREMIUM
+
   =============================
+
 🔑 1 IP [1 BULAN] :  Rp. 10.000
+
 🔑 1 IP [2 BULAN] :  Rp. 18.000
+
 🔑 1 IP [3 BULAN] :  Rp. 27.000
+
 🔑 1 IP [1 TAHUN] :  Rp. 55.000
+
    🔧1x Ganti IP Dengan Syarat
+
           [VPS SUSPEND]
+
   ==============================
+
 🔑 100 IP & 360 HARI = Rp. 500.000
+
 🔑 100 IP & 180 HARI = Rp. 300.000
+
 🔑UNLI IP & 1 TAHUN = Rp.800.000
+
 🔑UNLI IP & LIFETIME= Rp. 1.200.000
+
   ==============================
 
 # HUB NEGO : t.me/bijiOntaTerbangG
