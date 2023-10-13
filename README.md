@@ -1,4 +1,5 @@
-# 🇮🇩 AGUS KONTOL🇮🇩
+# 🇮🇩 AGUS RAWING 🇮🇩
+# WELCOME TO AUTOSCRIPT SSH
 # support debian 10 & 11
 # support ubuntu 20 & 18
 # command install
